@@ -1,0 +1,2 @@
+class VaddressesController < ApplicationController
+end
