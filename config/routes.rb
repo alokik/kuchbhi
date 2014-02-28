@@ -1,5 +1,9 @@
 Kuchbhi::Application.routes.draw do
+<<<<<<< HEAD
   root to:"static_pages#home"
+=======
+  devise_for :users
+>>>>>>> d3cb32c7ddc7f8da84d9a6194468d2bcad42bb2d
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
