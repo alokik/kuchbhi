@@ -139,11 +139,8 @@ PLATFORMS
 DEPENDENCIES
   annotate (= 2.6.2)
   coffee-rails (~> 4.0.0)
-<<<<<<< HEAD
-  haml (= 4.0.5)
-=======
   devise (= 3.2.3)
->>>>>>> d3cb32c7ddc7f8da84d9a6194468d2bcad42bb2d
+  haml (= 4.0.5)
   jbuilder (~> 1.2)
   jquery-rails
   pg (= 0.15.1)
