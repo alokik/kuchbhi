@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 gem "annotate", "2.6.2"
 
+gem "haml", "4.0.5"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
