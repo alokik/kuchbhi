@@ -9,5 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require unify/bootstrap.css
+ *= require unify/style.css
+ *= require unify/header1.css
+ *= require unify/responsive.css
+ *= require unify/font-awesome.css
+ *= require unify/flexslider.css
+ *= require unify/jquery.bxslider.css
+ *= require unify/layerslider.css
  *= require_tree .
  */

@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-migrate-1.2.1.min.js
+//= require unify/bootstrap.min.js
+//= require hover-dropdown.min.js
+//= require back-to-top.js
 //= require_tree .

@@ -19,12 +19,10 @@
 #
 
 class User < ActiveRecord::Base
-<<<<<<< HEAD
-	has_many :orders
-=======
+
+  has_many :orders
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
->>>>>>> d3cb32c7ddc7f8da84d9a6194468d2bcad42bb2d
 end
