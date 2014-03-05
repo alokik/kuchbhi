@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
 <<<<<<< HEAD
   has_many :orders
 =======
+	has_many :orders
 
 >>>>>>> d69976fb9fa98fd4e74f540792484e9baeecc3ec
   # Include default devise modules. Others available are:
