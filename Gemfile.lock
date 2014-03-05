@@ -52,8 +52,6 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
-    haml (4.0.5)
-      tilt
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -68,7 +66,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
-    multi_json (1.8.4)
+    multi_json (1.9.0)
     orm_adapter (0.5.0)
     pg (0.15.1)
     pg (0.15.1-x86-mingw32)
@@ -139,11 +137,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (= 2.6.2)
   coffee-rails (~> 4.0.0)
-<<<<<<< HEAD
-  haml (= 4.0.5)
-=======
   devise (= 3.2.3)
->>>>>>> d3cb32c7ddc7f8da84d9a6194468d2bcad42bb2d
   jbuilder (~> 1.2)
   jquery-rails
   pg (= 0.15.1)
