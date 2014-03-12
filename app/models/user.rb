@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
 
   has_many :orders
-
+  has_many :uaddresses
 
 
   # Include default devise modules. Others available are:

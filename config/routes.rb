@@ -3,6 +3,8 @@ Kuchbhi::Application.routes.draw do
   root to:"static_pages#home"
   devise_for :users
 
+  resources :service_areas
+  match '/search', to: 'service_areas#index', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
