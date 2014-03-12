@@ -1,0 +1,48 @@
+.top
+  .container
+    %ul.loginbar.pull-right
+      %li.devider
+      %li
+        %a{href: "page_faq.html"} FAQ
+      %li.devider
+      %li
+        - if user_signed_in?
+          =link_to 'Sign out', destroy_user_session_path, method: :delete
+        -else
+          =link_to('Login', new_user_session_path)
+/ /top
+/ === End Top ===
+/ === Header ===
+.header
+  .navbar.navbar-default{role: "navigation"}
+    .container
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: root_path}
+          =image_tag('logo1-default.png')
+      / Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse.navbar-responsive-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li.dropdown
+            %a.dropdown-toggle{"data-close-others" => "false", "data-delay" => "0", "data-hover" => "dropdown",  href: root_path}
+              Home
+          %li.dropdown
+            %a.dropdown-toggle{"data-close-others" => "false", "data-delay" => "0", "data-hover" => "dropdown", href: "#"}
+              Opportunities
+          
+          %li.dropdown
+            -if user_signed_in?
+              %a.dropdown-toggle{"data-close-others" => "false", "data-delay" => "0", "data-hover" => "dropdown", href:"#"}
+                Profile
+            -else
+              %a.dropdown-toggle{"data-close-others" => "false", "data-delay" => "0", "data-hover" => "dropdown", href: "#"}
+                Register
+  
+          / /input-group
+      / /navbar-collapse
+/ /header

@@ -12,7 +12,7 @@ group :production do
 end
 
 
-gem "haml", "4.0.5"
+gem "haml", "4.0.4"
 
 
 # Use SCSS for stylesheets
