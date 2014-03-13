@@ -12,7 +12,7 @@
  *= require_self
  *= require unify/bootstrap.css
  *= require unify/style.css
- *= require unify/header1.css
+ *= require unify/header.css
  *= require unify/responsive.css
  *= require unify/font-awesome.css
  *= require unify/flexslider.css
