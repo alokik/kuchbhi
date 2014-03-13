@@ -12,4 +12,5 @@
 %ul
   - @service_areas.each do |service_area|
     %li
-      = link_to service_area.location, service_area
+      = link_to service_area.vendor.name, service_area
+=paginate @service_areas, theme: 'twitter-bootstrap-3'

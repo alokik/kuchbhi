@@ -56,3 +56,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'kaminari', '0.15.0'
+gem 'bootstrap-kaminari-views'
