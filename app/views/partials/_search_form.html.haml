@@ -1,0 +1,21 @@
+.row.text-center
+	.col-md-10.col-md-offset-1
+		.panel.panel-red.margin-bottom-40
+			.panel-body
+				= form_tag service_areas_path, :method => 'get', class: 'form-inline' do
+					.form-group
+						= label_tag :searchcity, "City:"
+					.form-group
+						= text_field_tag :searchcity, params[:searchcity], class: 'form-control'
+					.form-group
+						= label_tag :searchloc, "Location:"
+					.form-group
+						= text_field_tag :searchloc, params[:searchloc], class: 'form-control'
+					.form-group
+						=label_tag 'or,' 
+					.form-group
+						=label_tag :searchpincode, "Pincode:" 
+					.form-group
+						=text_field_tag :searchpincode, params[:searchpincode], class: 'form-control'
+					.form-group
+						=submit_tag "Search", :name => nil, class: 'btn-u btn-u-red'

@@ -13,5 +13,5 @@ class Vendor < ActiveRecord::Base
 	has_many :service_areas
 	has_many :plans
 	has_many :orders
-	has_many :vaddresses
+	has_one :vaddress
 end
