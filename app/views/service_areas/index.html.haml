@@ -3,11 +3,11 @@
   .col-md-12.text-center
     %h2 Vendors serving in your area
 .row
-  .col-md-4
+  .col-md-3
     .panel.panel-grey
       .panel-body
         Filters
-  .col-md-8
+  .col-md-9
     - @service_areas.each do |service_area|
       -vendor = service_area.vendor
       -address = vendor.vaddress
