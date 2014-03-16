@@ -1,0 +1,19 @@
+# == Schema Information
+#
+# Table name: meals_time_plans
+#
+#  meal_id      :integer
+#  time_plan_id :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meal_id: 1
+  time_plan_id: 1
+
+two:
+  meal_id: 1
+  time_plan_id: 1

@@ -3,11 +3,11 @@
   .col-md-12.text-center
     %h2 Vendors serving in your area
 .row
-  .col-md-4
+  .col-md-3
     .panel.panel-grey
       .panel-body
         Filters
-  .col-md-8
+  .col-md-9
     - @service_areas.each do |service_area|
       -vendor = service_area.vendor
       -address = vendor.vaddress
@@ -28,8 +28,12 @@
               ,
             =address.city.humanize
         .panel-body
-          Menu and other details
-          %br
-          more details
+          .row
+            .col-md-2
+              Menu and other details
+            .col-md-10
+              .pull-right
+                %button.btn.btn-default
+                  Go to the Menu
 
     =paginate @service_areas, theme: 'twitter-bootstrap-3'

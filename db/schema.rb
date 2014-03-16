@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228191222) do
+ActiveRecord::Schema.define(version: 20140316064328) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "vendor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "items", force: true do |t|
     t.string   "name"
@@ -21,11 +28,25 @@ ActiveRecord::Schema.define(version: 20140228191222) do
     t.datetime "updated_at"
   end
 
-  create_table "menus", force: true do |t|
-    t.date     "from"
-    t.date     "to"
+  create_table "items_meals", id: false, force: true do |t|
+    t.integer  "meal_id"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meals", force: true do |t|
     t.string   "name"
+    t.integer  "category_id"
     t.integer  "vendor_id"
+    t.string   "nonvegtag"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meals_time_plans", id: false, force: true do |t|
+    t.integer  "meal_id"
+    t.integer  "time_plan_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,14 +55,18 @@ ActiveRecord::Schema.define(version: 20140228191222) do
     t.date     "from"
     t.date     "to"
     t.integer  "user_id"
-    t.integer  "plan_id"
+    t.integer  "meal_id"
+    t.integer  "time_plan_id"
+    t.integer  "uaddress_id"
+    t.integer  "price_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "plans", force: true do |t|
-    t.string   "name"
-    t.integer  "menu_id"
+  create_table "prices", force: true do |t|
+    t.integer  "mrp"
+    t.integer  "meal_id"
+    t.integer  "time_plan_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
