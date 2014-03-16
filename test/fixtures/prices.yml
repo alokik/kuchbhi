@@ -1,15 +1,11 @@
 # == Schema Information
 #
-# Table name: orders
+# Table name: prices
 #
 #  id           :integer          not null, primary key
-#  from         :date
-#  to           :date
-#  user_id      :integer
+#  mrp          :integer
 #  meal_id      :integer
 #  time_plan_id :integer
-#  uaddress_id  :integer
-#  price_id     :integer
 #  created_at   :datetime
 #  updated_at   :datetime
 #
@@ -17,19 +13,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  from: 2014-03-16
-  to: 2014-03-16
-  user_id: 1
+  mrp: 1
   meal_id: 1
   time_plan_id: 1
-  uaddress_id: 1
-  price_id: 1
 
 two:
-  from: 2014-03-16
-  to: 2014-03-16
-  user_id: 1
+  mrp: 1
   meal_id: 1
   time_plan_id: 1
-  uaddress_id: 1
-  price_id: 1

@@ -10,5 +10,6 @@
 #
 
 class TimePlan < ActiveRecord::Base
-has_many :plans
+	has_and_belongs_to_many :meals
+	has_many :prices
 end

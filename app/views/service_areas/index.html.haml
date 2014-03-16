@@ -28,8 +28,12 @@
               ,
             =address.city.humanize
         .panel-body
-          Menu and other details
-          %br
-          more details
+          .row
+            .col-md-2
+              Menu and other details
+            .col-md-10
+              .pull-right
+                %button.btn.btn-default
+                  Go to the Menu
 
     =paginate @service_areas, theme: 'twitter-bootstrap-3'

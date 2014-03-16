@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: meals
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  category_id :integer
+#  vendor_id   :integer
+#  nonvegtag   :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category_id: 1
+  vendor_id: 1
+  nonvegtag: MyString
+
+two:
+  name: MyString
+  category_id: 1
+  vendor_id: 1
+  nonvegtag: MyString
