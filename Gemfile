@@ -60,3 +60,4 @@ end
 gem 'kaminari', '0.15.0'
 gem 'bootstrap-kaminari-views'
 gem "font-awesome-rails", "4.0.3.1"
+gem 'acts-as-taggable-on'
