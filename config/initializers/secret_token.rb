@@ -9,4 +9,18 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
 Kuchbhi::Application.config.secret_key_base = '77e3db32d03d04c62bcbf84c6a366cc96b36617385dbee577bd05e68455adbf8b24a4862efdd1de008f69f673a58dff8248f9aedd34f15263d50faec87590811'
