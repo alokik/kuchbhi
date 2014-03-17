@@ -12,6 +12,7 @@
 #
 
 class Meal < ActiveRecord::Base
+	acts_as_taggable_on :cuisines
 	belongs_to :vendor
 	has_and_belongs_to_many :time_plans
 	has_and_belongs_to_many :items
