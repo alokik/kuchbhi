@@ -18,5 +18,6 @@
  *= require unify/flexslider.css
  *= require unify/jquery.bxslider.css
  *= require unify/layerslider.css
- *= require_tree .
+ *= require custom.css.scss
+
  */
