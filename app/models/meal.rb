@@ -13,6 +13,7 @@
 
 class Meal < ActiveRecord::Base
 	belongs_to :vendor
+	belongs_to :category
 	has_and_belongs_to_many :time_plans
 	has_and_belongs_to_many :items
 	has_many :orders

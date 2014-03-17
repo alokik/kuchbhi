@@ -33,7 +33,6 @@
               Menu and other details
             .col-md-10
               .pull-right
-                %button.btn.btn-default
-                  Go to the Menu
+                =button_to 'Got to the Menu', vendor, class: 'btn btn-default', method: 'get'
 
     =paginate @service_areas, theme: 'twitter-bootstrap-3'
