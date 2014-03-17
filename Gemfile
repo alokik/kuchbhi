@@ -37,9 +37,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Use sqlite3 as the database for Active Record
-group :development do
+group :development, :test do
   gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
 end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -62,3 +64,8 @@ gem 'bootstrap-kaminari-views'
 gem "font-awesome-rails", "4.0.3.1"
 gem 'acts-as-taggable-on'
 gem 'activeadmin', github: 'gregbell/active_admin'
+
+group :test do
+	gem 'selenium-webdriver', '2.35.1'
+  	gem 'capybara', '2.1.0'
+end
