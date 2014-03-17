@@ -1,0 +1,69 @@
+.clearfix.margin-bottom-40
+.row
+	.col-md-10
+		.panel.panel-red
+			.panel-heading
+				.pull-left
+					=image_tag "http://upload.wikimedia.org/wikipedia/en/4/4a/Faaso%27s_logo.JPG", height:50,width:100
+				%h4.white_font
+					%strong
+						=@vendor.name
+				.pull-right
+					Star Ratings
+				%p.white_font
+					-if !@address.nil?
+						
+						=@address.bldg_no
+						,
+						=@address.street_address.humanize
+						,
+						=@address.location.humanize
+						,
+						=@address.city.humanize
+
+			.panel-body
+				.row
+					.col-md-12
+						Some details
+				
+				.row.tab-v1
+					
+					%ul.nav.nav-tabs
+						%li.active
+							=link_to "Menu", '#menu', "data-toggle" => 'tab'
+						%li
+							=link_to "Reviews", '#reviews', "data-toggle" => 'tab'
+						%li
+							=link_to "Info", '#info', "data-toggle" => 'tab'
+					.tab-content
+						#menu.tab-pane.active
+							.row.tab-v3
+								.col-md-3
+									%ul.nav.nav-pills.nav-stacked
+										-@categories.each_with_index do |c,i|
+											%li{style: 'list-style-type:none;', class: "#{'active' if i ==0}"}
+												=link_to c.name, "##{c.id}", "data-toggle" => 'tab'	
+								.col-md-9
+									.tab-content
+										-@categories.each_with_index do |c,i|
+											-meals = c.meals
+											.tab-pane{id: c.id,class: "#{'active' if i ==0}"}
+												-meals.each do |m|
+													-items = m.items
+													%li{style: 'list-style-type:none;'}
+														%strong
+															= m.name
+														%p
+															-items.each do |item|
+																=item.name
+																,
+
+												
+						#reviews.tab-pane
+							Reviews
+						#info.tab-pane
+							Info
+	.col-md-2
+							
+
+

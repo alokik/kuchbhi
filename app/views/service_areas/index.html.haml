@@ -15,7 +15,7 @@
         .panel-heading
           .panel-title
             %strong 
-              = link_to vendor.name, service_area, class: 'white_font'
+              = link_to vendor.name, vendor, class: 'white_font'
             .pull-right
               Star Rating and reviews
           -if !address.nil?
@@ -33,7 +33,6 @@
               Menu and other details
             .col-md-10
               .pull-right
-                %button.btn.btn-default
-                  Go to the Menu
+                =button_to 'Got to the Menu', vendor, class: 'btn btn-default', method: 'get'
 
     =paginate @service_areas, theme: 'twitter-bootstrap-3'

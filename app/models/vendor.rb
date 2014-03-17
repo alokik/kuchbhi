@@ -9,9 +9,9 @@
 #
 
 class Vendor < ActiveRecord::Base
-	has_many :menus
+	has_many :categories
 	has_many :service_areas
-	has_many :plans
+	has_many :meals
 	has_many :orders
 	has_one :vaddress
 end
