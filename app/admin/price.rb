@@ -1,6 +1,6 @@
 ActiveAdmin.register Price do
 
-  
+  permit_params :mrp, :meal_id, :time_plan_id
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
