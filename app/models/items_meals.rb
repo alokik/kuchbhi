@@ -8,5 +8,5 @@
 #  updated_at :datetime
 #
 
-class MealsItems < ActiveRecord::Base
+class ItemsMeals < ActiveRecord::Base
 end

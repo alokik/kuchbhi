@@ -25,9 +25,8 @@
 				.row
 					.col-md-12
 						Some details
-				
+				.clearfix.margin-bottom-40
 				.row.tab-v1
-					
 					%ul.nav.nav-tabs
 						%li.active
 							=link_to "Menu", '#menu', "data-toggle" => 'tab'
@@ -57,7 +56,7 @@
 															-items.each do |item|
 																=item.name
 																,
-
+															
 												
 						#reviews.tab-pane
 							Reviews

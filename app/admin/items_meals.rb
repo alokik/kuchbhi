@@ -1,7 +1,6 @@
-ActiveAdmin.register Meal do
+ActiveAdmin.register ItemsMeals do
 
-  permit_params :name, :vendor_id, :category_id, :nonvegtag
-  
+  permit_params :meal_id, :item_id  
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
