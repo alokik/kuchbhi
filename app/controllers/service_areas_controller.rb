@@ -5,5 +5,6 @@ class ServiceAreasController < ApplicationController
 	
 	def show
 	@service_area = ServiceArea.find(params[:id])
+	@vendor_area = service_area.vendor_areas
 	end
 end

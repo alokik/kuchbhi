@@ -12,8 +12,14 @@
 #
 
 class ServiceArea < ActiveRecord::Base
-	belongs_to :vendor
+	has_many :vendor_areas
+	has_many :vendors, through: :vendor_areas
+	accepts_nested_attributes_for :vendor_areas, :allow_destroy => true
 	validates :vendor_id, presence: true
+
+	def name
+    return self.location
+	end
 	
 	def self.search(searchcity, searchloc, searchpincode )
 		if searchcity

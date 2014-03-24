@@ -1,7 +1,8 @@
 ActiveAdmin.register Vaddress do
 
-    permit_params :vendor_id, :bldg_no, :street_address, :location,
+permit_params :vendor_id, :bldg_no, :street_address, :location,
                 :city, :landmark  
+
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
