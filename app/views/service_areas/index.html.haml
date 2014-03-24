@@ -9,30 +9,30 @@
         Filters
   .col-md-9
     - @service_areas.each do |service_area|
-      -vendor = service_area.vendor
-      -address = vendor.vaddress
-      .panel.panel-red
-        .panel-heading
-          .panel-title
-            %strong 
-              = link_to vendor.name, vendor, class: 'white_font'
-            .pull-right
-              Star Rating and reviews
-          -if !address.nil?
-            =address.bldg_no
-            ,
-            =address.street_address.humanize
-            ,
-            %strong
-              =address.location.humanize
-              ,
-            =address.city.humanize
-        .panel-body
-          .row
-            .col-md-2
-              Menu and other details
-            .col-md-10
+      - service_area.vendors.each do |vendor|
+        - address = vendor.vaddress
+        .panel.panel-red
+          .panel-heading
+            .panel-title
+              %strong 
+                = link_to vendor.name, vendor, class: 'white_font'
               .pull-right
-                =button_to 'Got to the Menu', vendor, class: 'btn btn-default', method: 'get'
+                Star Rating and reviews
+            -if !address.nil?
+              =address.bldg_no
+              ,
+              =address.street_address.humanize
+              ,
+              %strong
+                =address.location.humanize
+                ,
+              =address.city.humanize
+          .panel-body
+            .row
+              .col-md-2
+                Menu and other details
+              .col-md-10
+                .pull-right
+                  =button_to 'Got to the Menu', vendor, class: 'btn btn-default', method: 'get'
 
     =paginate @service_areas, theme: 'twitter-bootstrap-3'

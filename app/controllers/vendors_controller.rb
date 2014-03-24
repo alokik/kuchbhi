@@ -8,4 +8,9 @@ class VendorsController < ApplicationController
 		
 	end
 
+private
+  def vendor_params
+    params.require(:vendor).permit(:name, vendor_area:[:vendor_id, :service_area_id])
+  end
 end
+
