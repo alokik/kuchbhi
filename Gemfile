@@ -11,10 +11,10 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+## for search
+gem 'ransack', '~> 1.1.0'
 
 gem "haml", "4.0.4"
-
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

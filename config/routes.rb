@@ -8,7 +8,7 @@ Kuchbhi::Application.routes.draw do
   resources :service_areas
   resources :vendors
 
-  match '/search', to: 'service_areas#index', via: 'get'
+  match '/search', to: 'vendors#index', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
