@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: a11e9d4d243f8c4b5e4c69e3623e9478107a3dc2
+  revision: ae862fda64b2e44f676080bd7a5cb87dabbf449a
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -45,6 +45,8 @@ GEM
       tzinfo (~> 0.3.37)
     acts-as-taggable-on (3.0.2)
       rails (>= 3, < 5)
+    acts_as_shopping_cart (0.2.0)
+      activerecord (~> 4.0.0)
     annotate (2.6.2)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
@@ -155,7 +157,7 @@ GEM
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.1)
+    rake (10.2.1)
     ransack (1.1.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
@@ -227,6 +229,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   acts-as-taggable-on
+  acts_as_shopping_cart (~> 0.2.0)
   annotate (= 2.6.2)
   bootstrap-kaminari-views
   capybara (= 2.1.0)

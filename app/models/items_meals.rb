@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: meals_items
+# Table name: items_meals
 #
 #  meal_id    :integer
 #  item_id    :integer

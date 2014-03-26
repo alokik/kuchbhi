@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: meals
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  category_id :integer
+#  vendor_id   :integer
+#  nonvegtag   :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 require 'spec_helper'
 
 describe Meal do
