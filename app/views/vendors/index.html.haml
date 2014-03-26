@@ -6,7 +6,14 @@
   .col-md-3
     .panel.panel-grey
       .panel-body
-        Filters
+        = search_form_for @q do |f|
+          = f.label :name_cont
+          = f.text_field :name_cont
+          = f.label "Veg"
+          = check_box_tag "q[meal_nonveg_eq][]", "veg"
+          = f.label "Non-Veg"
+          = check_box_tag "q[meal_nonveg_eq][]", "nonveg"          
+          = f.submit "search"
   .col-md-9
     -@vendors.each do |vendor|
       -address = vendor.vaddress
@@ -34,4 +41,4 @@
               .pull-right
                 =button_to 'Got to the Menu', vendor, class: 'btn btn-default', method: 'get'
 
-    =paginate @service_areas, theme: 'twitter-bootstrap-3'
+    =paginate @vendors, theme: 'twitter-bootstrap-3'

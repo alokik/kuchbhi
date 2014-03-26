@@ -3,14 +3,15 @@ class VendorsController < ApplicationController
 	def index
 	    
 	    @q = Vendor.search(params[:q])
-
+		per_page = 2
+	    
 	    if params[:q]
-			@vendors = @q.result(distinct: true)    
+			@vendors_arr = @q.result(distinct: true)    
 	    else 
-		    per_page = 2
-			@service_areas = ServiceArea.search(params[:searchcity], params[:searchloc], params[:searchpincode])
+		    
+			@ss = ServiceArea.search(params[:searchcity], params[:searchloc], params[:searchpincode])
 			@vendors_arr = Array.new
-			@service_areas.each do |s|
+			@ss.each do |s|
 				s.vendors.each do |v|				
 					@vendors_arr<<v
 				end
