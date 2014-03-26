@@ -8,12 +8,15 @@ class VendorsController < ApplicationController
 			@vendors = @q.result(distinct: true)    
 	    else 
 		    per_page = 2
-			@service_areas = Kaminari.paginate_array(ServiceArea.search(params[:searchcity], params[:searchloc], params[:searchpincode])).page(params[:page]).per(per_page)
-			@vendors = Array.new
+			@service_areas = ServiceArea.search(params[:searchcity], params[:searchloc], params[:searchpincode])
+			@vendors_arr = Array.new
 			@service_areas.each do |s|
-				@vendors<<s.vendor
+				s.vendors.each do |v|				
+					@vendors_arr<<v
+				end
 			end
 	    end
+	    @vendors = Kaminari.paginate_array(@vendors_arr).page(params[:page]).per(per_page)
 	end
 
 	def show

@@ -8,8 +8,7 @@
       .panel-body
         Filters
   .col-md-9
-    - @service_areas.each do |service_area|
-      - service_area.vendors.each do |vendor|
+      - @vendors.each do |vendor|
         - address = vendor.vaddress
         .panel.panel-red
           .panel-heading
@@ -34,5 +33,4 @@
               .col-md-10
                 .pull-right
                   =button_to 'Got to the Menu', vendor, class: 'btn btn-default', method: 'get'
-
-    =paginate @service_areas, theme: 'twitter-bootstrap-3'
+    =paginate @vendors, theme: 'twitter-bootstrap-3'
