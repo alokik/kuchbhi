@@ -25,11 +25,22 @@ class VendorsController < ApplicationController
 		@address = @vendor.vaddress
 
 		@categories = @vendor.categories
+
+		@shopping_cart = get_current_cart
+
 	end
 
 private
   def vendor_params
     params.require(:vendor).permit(:name, vendor_area:[:vendor_id, :service_area_id])
   end
+
+  def get_current_cart
+  	if session[:shopping_cart_id]
+  		shopping_cart_id = session[:shopping_cart_id]
+  		ShoppingCart.find(shopping_cart_id)
+  	end
+  end
+
 end
 

@@ -7,6 +7,10 @@ Kuchbhi::Application.routes.draw do
 
   resources :service_areas
   resources :vendors
+  resources :shopping_cart do 
+    
+  end
+  post 'add_to_shopping_cart', to: "shopping_carts#add_to_cart"
 
   match '/search', to: 'vendors#index', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.

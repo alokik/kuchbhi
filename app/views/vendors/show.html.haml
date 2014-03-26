@@ -43,26 +43,39 @@
 											%li{style: 'list-style-type:none;', class: "#{'active' if i ==0}"}
 												=link_to c.name, "##{c.id}", "data-toggle" => 'tab'	
 								.col-md-9
-									.tab-content
+									.tab-content.meal-box
 										-@categories.each_with_index do |c,i|
 											-meals = c.meals
 											.tab-pane{id: c.id,class: "#{'active' if i ==0}"}
 												-meals.each do |m|
-													-items = m.items
-													%li{style: 'list-style-type:none;'}
-														%strong
-															= m.name
-														%p
-															-items.each do |item|
-																=item.name
-																,
-															
+													.meal-cont
+														-items = m.items
+														.row
+															.col-md-9
+																%p
+																	%strong	
+																		= m.name			
+																	%br	
+																	-items.each do |item|
+																		=item.name
+																		,
+															.col-md-3.pull-right
+																=select_tag :quantity, options_for_select(1..10)
+																=link_to(fa_icon("plus-circle", text:"Add to cart", class: 'green'), add_to_shopping_cart_path(meal_id: m.id, vendor_id: @vendor.id), method:'post')
+																
 												
 						#reviews.tab-pane
 							Reviews
 						#info.tab-pane
 							Info
 	.col-md-2
-							
+		Shopping cart
+		
+		-if @shopping_cart
+			
+			=render partial: 'shopping_cart_item', collection: @shopping_cart.shopping_cart_items
+			=button_to 'Checkout', '#', class: 'btn btn-success'
+		-else						
+			Add items from menu
 
 
